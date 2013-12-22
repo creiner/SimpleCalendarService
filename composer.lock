@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "812545d32142e5ca6e2dc1dd72c18cc0",
+    "hash": "0334a2f5cbd4284457520c313e9db4d0",
     "packages": [
         {
             "name": "eluceo/ical",
@@ -99,6 +99,45 @@
                 "css"
             ],
             "time": "2013-12-05 16:09:10"
+        },
+        {
+            "name": "vrana/notorm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/notorm.git",
+                "reference": "bd03901ab73ff86adbc1ea581041324e6247a268"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vrana/notorm/zipball/bd03901ab73ff86adbc1ea581041324e6247a268",
+                "reference": "bd03901ab73ff86adbc1ea581041324e6247a268",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "NotORM.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Vrána",
+                    "homepage": "http://www.vrana.cz/"
+                }
+            ],
+            "description": "NotORM is a PHP library for simple working with data in the database.",
+            "homepage": "http://www.notorm.com/",
+            "keywords": [
+                "database",
+                "dbal"
+            ],
+            "time": "2013-12-21 14:36:47"
         }
     ],
     "packages-dev": [
@@ -109,7 +148,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "eluceo/ical": 20
+        "eluceo/ical": 20,
+        "vrana/notorm": 20
     },
     "platform": [
 

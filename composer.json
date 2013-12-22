@@ -2,6 +2,7 @@
     "name": "creiner/calendar",
     "require": {
         "eluceo/ical": "dev-master",
-        "twbs/bootstrap": "*"  
+        "twbs/bootstrap": "*"  ,
+	"vrana/notorm": "dev-master"
 	}
 }
