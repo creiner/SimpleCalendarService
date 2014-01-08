@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>{{Title}}</h3>
+    
+    <div class="well">
+        {{ Msg }}        
+    </div>
+        <a href="/administration/del/acc/{{id}}" class="btn btn-primary">{{Yes}}</a>
+        <a href="/administration/" class="btn">{{No}}</a>
+    
+    
+{% endblock %}

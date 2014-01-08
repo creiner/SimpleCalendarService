@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>{{AppName}}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <header class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+              <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="/administration/" class="navbar-brand">{{AppName}}</a>
+              </div>
+              <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="/administration/">{{Home}}</a>
+                  </li>
+                  <li>
+                    <a href="/administration/add">{{Add}}</a>
+                  </li>
+                  <!--
+                  <li>
+                    <a href="./upload.php">Upload</a>
+                  </li>
+                  -->
+                </ul>
+                  <!--
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="./about">About</a>
+                  </li>
+                </ul>
+                  -->
+              </nav>
+            </div>
+          </header>
+        <main class="bs-masthead" id="content" role="main" style="padding-top: 50px;">
+            <div class="container">{% block content %}{% endblock %}</div>
+        </main>
+    </body>
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(["trackPageView"]);
+	  _paq.push(["enableLinkTracking"]);
+
+	  (function() {
+		var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.schaefer-reiner.de/";
+		_paq.push(["setTrackerUrl", u+"piwik.php"]);
+		_paq.push(["setSiteId", "16"]);
+		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->
+</html>

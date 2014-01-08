@@ -1,8 +1,24 @@
 {
-    "name": "creiner/calendar",
+    "name": "creiner/SimpleCalendarService",
+    "description": "A simple calendar service for providing an ical file.",
+    "keywords": ["calendar","managment"],
+    "homepage": "http://github.com/creiner/SimpleCalendarService",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Reiner",
+            "email": "info@christianreiner.de",
+            "homepage": "http://www.christianreiner.de"
+        }
+    ],
     "require": {
+        "php": ">=5.3.0",
+        "monolog/monolog": "1.*",
+        "slim/slim": "2.*",
+        "slim/views": "0.*",
+        "twig/twig": "1.*",
         "eluceo/ical": "dev-master",
-        "twbs/bootstrap": "*"  ,
-	"vrana/notorm": "dev-master"
-	}
+        "vrana/notorm": "dev-master",
+        "phpoffice/phpexcel": "dev-develop"
+    }
 }

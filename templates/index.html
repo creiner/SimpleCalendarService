@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>{{ Title }}</h3>
+    
+    {% if events|length > 0 %}
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Datum</th>
+            <th>Name</th>
+            <th>Ort</th>
+            <th>Beschreibung</th>
+            <th></th>
+        </tr>
+    {% for event in events %}
+        <tr>
+            <td>{{ event.StartDate|date('d.m.Y', timezone="Europe/Berlin") }}</td>
+            <td>{{ event.Name|e }}</td>
+            <td>{{ event.Location|e }}</td>
+            <td>{{ event.Description|e }}</td>    
+            <td><a href="/administration/edit/{{ event.Id|e }}"><span class="glyphicon-edit glyphicon" /></a>
+                <a href="/administration/del/{{ event.Id|e }}"><span class="glyphicon-trash glyphicon" /></a></td>        
+        </tr>
+    {% endfor %}
+    </ul>
+    {% else %}
+    Keine Einträge
+    {% endif %}    
+{% endblock %}
