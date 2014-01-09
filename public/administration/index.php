@@ -25,7 +25,9 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 $staticText = array('AppName' => CAL_NAME,
                     'Home' => "Übersicht",
-                    'Add' => "Eintrag hinzufügen");
+                    'Add' => "Eintrag hinzufügen",
+                    'PiwikUrl' => PIWIK_URL,
+                    'PiwikSiteId' => PIWIK_SITE_ID);
 
 $app->get('/', function () use ($app, $db, $staticText) {
     $app->render('index.html', array_merge( $staticText, array( 'Title' => "Einträge",
